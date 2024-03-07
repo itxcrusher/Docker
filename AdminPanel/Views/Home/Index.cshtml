@@ -1,0 +1,140 @@
+﻿@{
+    ViewData["Title"] = "Admin Panel";
+
+    var usersData = ViewBag.usersData;
+    var artsData = ViewBag.artsData;
+    var activityLog = ViewBag.activityLog;
+
+    var orders = ViewBag.queueOrders;
+    var totalUsers = usersData.Length;
+    var totalArts = artsData.Length;
+    var totalLogs = activityLog.Length;
+
+    <!-- ######################################## --------------- Dashboard --------------- ######################################## -->
+    <article id="dashboard" class="section active">
+        <h1 class="heading">Dashboard</h1>
+        <div id="db-top">
+            <h6 class="div">Total Users: @totalUsers</h6>
+            <h6 class="div">Total Artworks: @totalArts</h6>
+            <h6 class="div">Orders in Queue: @orders</h6>
+        </div>
+        <div id="db-bottom">
+            <div>
+                <div class="div">
+                    <h3>Top Artists</h3>
+                    <p>
+                        @for(int i=0, j=0; i<totalUsers; i++)
+                        {
+                            if(usersData[i].getRole() == "Artist")
+                            {
+                                j++;
+                                <span>@j: @usersData[i].getName()</span>
+                            }
+                            if(j == 3){ break; }
+                        }
+                </div>
+                <div class="div">
+                    <h3>Top Artworks</h3>
+                    <p>
+                        @for (int i = totalArts, j=1; i > totalArts-3; i--, j++)
+                        {
+                            <span>@j: @artsData[i-1].getTitle()</span>
+                        }
+                    </p>
+                </div>
+            </div>
+            <div class="div">
+                <h3>Recent Activities</h3>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Activity</th>
+                    </tr>
+                    @for(int i=0; i<3; i++)
+                    {
+                        <tr>
+                            <td>@activityLog[i].getName()</td>
+                            <td>@activityLog[i].getActivity()</td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+    </article>
+
+    <!-- ######################################## --------------- Artworks --------------- ######################################## -->
+    <article id="art" class="section hide">
+        <h1 class="heading">Artworks</h1>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Artist</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+                @for (int i = 0; i < totalArts; i++)
+                {
+                    var art = artsData[i];
+                    <tr>
+                        <td>@(i+1)</td>
+                        <td>@art.getTitle()</td>
+                        <td>@art.getArtist()</td>
+                        <td>@art.getQuantity()</td>
+                        <td>@art.getPrice()</td>
+                    </tr>
+                }
+            </table>
+    </article>
+
+    <!-- ######################################## --------------- Users --------------- ######################################## -->
+    <article id="users" class="section hide">
+        <h1 class="heading">Users</h1>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Points</th>
+                <th>Status</th>
+            </tr>
+                @for (int i = 0; i < totalUsers; i++)
+                {
+                    var user = usersData[i];
+                    <tr>
+                        <td>@(i+1)</td>
+                        <td>@user.getName()</td>
+                        <td>@user.getRole()</td>
+                        <td>@user.getPoints()</td>
+                        <td>@user.getStatus()</td>
+                    </tr>
+                }
+        </table>
+    </article>
+
+    <!-- ######################################## --------------- Activity --------------- ######################################## -->
+    <article id="activity" class="section hide">
+        <h1 class="heading">Activity Log</h1>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Activity</th>
+                <th>Time</th>
+            </tr>
+            @for (int i = 0; i < totalLogs; i++)
+            {
+                var log = activityLog[i];
+                <tr>
+                    <td>@log.getId()</td>
+                    <td>@log.getName()</td>
+                    <td>@log.getRole()</td>
+                    <td>@log.getActivity()</td>
+                    <td>@log.getTime()</td>
+                </tr>
+            }
+        </table>
+    </article>
+
+}

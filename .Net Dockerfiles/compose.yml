@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+  sqldb:
+    container_name: art_gallery_db
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    ports:
+        - 5001:1433
+    environment:
+        - ACCEPT_EULA=Y
+        - SA_PASSWORD=123
+  adminpanel:
+    container_name: admin_panel_container
+    image: ${DOCKER_REGISTRY-}adminpanel
+    build:
+        context: .
+        dockerfile: Admin Panel/Dockerfile
+    ports:
+        - 5000:8080
+    depends_on:
+        - sqldb
+    environment:
+        - DB_HOST=sqldb
+        - DB_NAME=adminpanel
+        - DB_SA_PASSWORD=123

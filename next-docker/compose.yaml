@@ -42,6 +42,6 @@ services:
   #     - MONGO_INITDB_ROOT_PASSWORD=rnZzJjIDr3bIDymV
   #   volumes:
   #     - tasked:/data/db
-    
+
 volumes:
   tasked:
