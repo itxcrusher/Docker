@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\ITM\\.NET\\Activities\\AdminPanel\\AdminPanel.csproj": {}
+    "E:\\ITM\\DevOps\\Docker\\AdminPanel\\AdminPanel.csproj": {}
   },
   "projects": {
-    "E:\\ITM\\.NET\\Activities\\AdminPanel\\AdminPanel.csproj": {
+    "E:\\ITM\\DevOps\\Docker\\AdminPanel\\AdminPanel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ITM\\.NET\\Activities\\AdminPanel\\AdminPanel.csproj",
+        "projectUniqueName": "E:\\ITM\\DevOps\\Docker\\AdminPanel\\AdminPanel.csproj",
         "projectName": "AdminPanel",
-        "projectPath": "E:\\ITM\\.NET\\Activities\\AdminPanel\\AdminPanel.csproj",
+        "projectPath": "E:\\ITM\\DevOps\\Docker\\AdminPanel\\AdminPanel.csproj",
         "packagesPath": "C:\\Users\\muham\\.nuget\\packages\\",
-        "outputPath": "E:\\ITM\\.NET\\Activities\\AdminPanel\\obj\\",
+        "outputPath": "E:\\ITM\\DevOps\\Docker\\AdminPanel\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -57,6 +57,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.2, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.19.6, )"
             }
           },
           "imports": [
