@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "E:\\ITM\\DevOps\\Docker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EB5D5C5D-9E0D-461B-99A0-C0FCEA7761E6}|AdminPanel\\AdminPanel.csproj|e:\\itm\\devops\\docker\\adminpanel\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{EB5D5C5D-9E0D-461B-99A0-C0FCEA7761E6}|AdminPanel\\AdminPanel.csproj|solutionrelative:adminpanel\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB5D5C5D-9E0D-461B-99A0-C0FCEA7761E6}|AdminPanel\\AdminPanel.csproj|e:\\itm\\devops\\docker\\adminpanel\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB5D5C5D-9E0D-461B-99A0-C0FCEA7761E6}|AdminPanel\\AdminPanel.csproj|solutionrelative:adminpanel\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{79F4F9B2-9F21-4BE7-99F9-B119F368F0FB}|docker-compose.dcproj|e:\\itm\\devops\\docker\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{79F4F9B2-9F21-4BE7-99F9-B119F368F0FB}|docker-compose.dcproj|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,27 +27,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "E:\\ITM\\DevOps\\Docker\\AdminPanel\\Dockerfile",
-              "RelativeDocumentMoniker": "AdminPanel\\Dockerfile",
-              "ToolTip": "E:\\ITM\\DevOps\\Docker\\AdminPanel\\Dockerfile",
-              "RelativeToolTip": "AdminPanel\\Dockerfile",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-03-07T14:54:55.859Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\ITM\\DevOps\\Docker\\AdminPanel\\Program.cs",
-              "RelativeDocumentMoniker": "AdminPanel\\Program.cs",
-              "ToolTip": "E:\\ITM\\DevOps\\Docker\\AdminPanel\\Program.cs",
-              "RelativeToolTip": "AdminPanel\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T14:53:16.411Z",
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "E:\\ITM\\DevOps\\Docker\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "E:\\ITM\\DevOps\\Docker\\docker-compose.yml",
+              "RelativeToolTip": "docker-compose.yml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2024-03-07T15:04:30.453Z",
               "EditorCaption": ""
             }
           ]
