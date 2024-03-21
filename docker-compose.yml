@@ -1,9 +1,12 @@
-version: '3.4'
+version: '3.8'
 
+# Define a custom network for services communication
 networks:
   dockerNetwork:
 
+# Define services
 services:
+  # Frontend service
   adminpanel:
     container_name: admin-panel-app
     image: ${DOCKER_REGISTRY-}adminpanel
@@ -23,9 +26,13 @@ services:
     networks:
       - dockerNetwork
 
+  # SQL Server service
   sqlserver:
     container_name: admin-panel-db
-    image: mcr.microsoft.com/mssql/server
+#    image: mcr.microsoft.com/mssql/server
+    build:
+      context: .
+      dockerfile: Dockerfile
     environment:
       SA_PASSWORD: "ArtGallery123"
       ACCEPT_EULA: "Y"
@@ -36,5 +43,6 @@ services:
     networks:
       - dockerNetwork
 
+# Define named volumes
 volumes:
   sql_data:

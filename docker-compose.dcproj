@@ -10,10 +10,13 @@
     <DockerServiceName>adminpanel</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="ArtGallery.bacpac" />
+    <None Include="ArtGallery.bak" />
     <None Include="docker-compose.override.yml">
       <DependentUpon>docker-compose.yml</DependentUpon>
     </None>
     <None Include="docker-compose.yml" />
     <None Include=".dockerignore" />
+    <None Include="Dockerfile" />
   </ItemGroup>
 </Project>
